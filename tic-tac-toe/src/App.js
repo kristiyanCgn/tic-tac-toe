@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css';
 
 import { Board } from './Components/Board';
+import { ScoreBoard } from './Components/ScoreBoard';
 
 function App() {
 
@@ -47,7 +48,6 @@ function App() {
                 })
             }
         }
-        console.log(scores);
 
         setBoard(updatedBoard);
 
@@ -67,6 +67,7 @@ function App() {
 
   return (
     <div className="App">
+        <ScoreBoard scores={scores} xTurn={xTurn} />
         <Board board={board} onClick={handleBoxClick} />
     </div>
   );
